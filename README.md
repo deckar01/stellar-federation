@@ -2,4 +2,4 @@
 
 This server lets you have `username@example.com` work on Stellar.
 
-- (node)[node]
+- [node](node)
