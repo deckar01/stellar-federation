@@ -44,7 +44,11 @@ if (USE_SSL) {
   var certificate = fs.readFileSync(PUBLIC_KEY, 'utf8');
 
   var server = https.createServer({key: privateKey, cert: certificate}, app);
-  server.listen(5000);
+
+  console.log("Starting server on port 443");
+  server.listen(443);
 } else {
+  console.log("Starting server on port 5000")
+  // Needs to served behind reverse proxy
   app.listen(5000);
 }
