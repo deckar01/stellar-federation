@@ -1,6 +1,4 @@
 // Simple Stellar federation server.
-//
-// You may have to `npm i express` to install dependencies.
 
 // Configure federation
 var DOMAIN_NAME = 'example.com';
