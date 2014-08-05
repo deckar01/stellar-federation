@@ -8,8 +8,8 @@ var STELLAR_ADDRESS = 'Stellar address goes here';
 // without your own SSL certificate, use https://ngrok.com/ to set up
 // an SSL-secured localtunnel.
 var USE_SSL = false;
-var PRIVATE_KEY = 'sslcert/server.key';
-var PUBLIC_KEY = 'sslcert/server.crt';
+var PRIVATE_KEY_PATH = 'sslcert/server.key';
+var CERTIFICATE_PATH = 'sslcert/server.crt';
 
 // Include dependencies
 var express = require('express');
@@ -40,8 +40,8 @@ app.get('/stellar.txt', function(req, res) {
 });
 
 if (USE_SSL) {
-  var privateKey  = fs.readFileSync(PRIVATE_KEY, 'utf8');
-  var certificate = fs.readFileSync(PUBLIC_KEY, 'utf8');
+  var privateKey  = fs.readFileSync(PRIVATE_KEY_PATH, 'utf8');
+  var certificate = fs.readFileSync(CERTIFICATE_PATH, 'utf8');
 
   var server = https.createServer({key: privateKey, cert: certificate}, app);
 

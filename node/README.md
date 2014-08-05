@@ -31,8 +31,8 @@ var STELLAR_ADDRESS = 'Stellar address goes here';
 // without your own SSL certificate, use https://ngrok.com/ to set up
 // an SSL-secured localtunnel.
 var USE_SSL = false;
-var PRIVATE_KEY = 'sslcert/server.key';
-var PUBLIC_KEY = 'sslcert/server.crt';
+var PRIVATE_KEY_PATH = 'sslcert/server.key';
+var CERTIFICATE_PATH = 'sslcert/server.crt';
 ```
 
 ##Usage
