@@ -1,5 +1,9 @@
 #Serve Stellar federation from your domain using nodejs and express
 
+This is an example federation server written in node.js. It allows
+clients to look up `username@yourdomain.com` which can resolve to any
+Stellar address of your choice.
+
 ##Dependencies
 
 - Nodejs
