@@ -11,3 +11,4 @@ This repository contains a collection of example federation servers.
 
 These are the implementations in this repository:
 - [Node.js and express](node)
+- [Apache and PHP5](php5)
