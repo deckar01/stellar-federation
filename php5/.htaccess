@@ -1,0 +1,19 @@
+## Configuration Options
+##
+## For this config file to work Apache needs to be configured correctly.
+## See http://httpd.apache.org/docs/2.2/howto/htaccess.html
+##
+## At a minimum ensure that the AllowOverride directive is not set to None (requires All or FileInfo
+##
+## 1. Use mod_rewrite to redirect requests for stellar.txt to stellar.php
+## 2. Override the default handler for the stellar.txt so it is interpreted as PHP
+
+## Option 1 - 
+# RewriteEngine On
+# RewriteRule ^stellar\.txt$  stellar.php 
+
+## Option 2
+<FilesMatch "^stellar\.txt">
+	SetHandler application/x-httpd-php
+</FilesMatch>
+
