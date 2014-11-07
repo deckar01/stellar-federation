@@ -38,7 +38,7 @@
 		exit("Stellar address not found for user [$user@$emailDomain]");
 	}
 
-	header('Content-Type: text/json');
+	header('Content-Type: application/json');
 	header('Access-Control-Allow-Origin: *');
 ?>
 federation_json: {
